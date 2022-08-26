@@ -1,0 +1,69 @@
+{
+  "navbar" : {
+    "title" : "Material UI",
+    "routes" :[
+      {
+        "path": "dashboard",
+        "title": "Dashboard",
+        "icon": "dashboard",
+        "active": true
+      },
+      {
+        "path": "typography",
+        "title": "Typography",
+        "icon": "library_books",
+        "active": true
+      },
+      {
+        "path": "colors",
+        "title": "Colors",
+        "icon": "invert_colors",
+        "active": true
+      },
+      {
+        "path": "icons",
+        "title": "Icons",
+        "icon": "bubble_chart",
+        "active": true
+      },
+      {
+        "path": "Components",
+        "title": "Components",
+        "icon": "settings_input_component",
+        "active": true,
+        "children": [
+          {
+            "path": "Buttons",
+            "title": "Buttons",
+            "icon": "",
+            "active": true
+          },
+          {
+            "path": "Forms",
+            "title": "Forms",
+            "icon": "",
+            "active": true
+          },
+          {
+            "path": "Pages",
+            "title": "Pages",
+            "icon": "",
+            "active": true
+          },
+          {
+            "path": "Notifications",
+            "title": "Notifications",
+            "icon": "",
+            "active": true
+          },
+          {
+            "path": "Widgets",
+            "title": "Widgets",
+            "icon": "",
+            "active": true
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+@import "~src/assets/styles/custom-theme";
+
+.fp-list-group-item {
+  position: relative;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.125);
+  //border: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: none;
+  border-top: none;
+}
+
+.mat-list-base{
+  padding: 0px!important;
+}
+
+.menu-link {
+  padding: 15px 0 !important;
+  height: auto !important;
+  text-decoration: none;
+}
+
+.mat-accordion .mat-expansion-panel{
+  border-radius: 0px;
+  margin: 0px;
+  background: $primary;
+}
+.mat-expansion-panel-header {
+  background: rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mat-expansion-panel-header:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+::ng-deep .expansion-indicator > .mat-expansion-indicator::after {
+  color: white;
+}
+.active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.app-icon {
+  vertical-align: bottom;
+  padding-right: 20px;
+}
+
+.app-icon-actived {
+  color: #2EF0AE;
+}

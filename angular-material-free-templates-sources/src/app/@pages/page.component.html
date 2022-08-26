@@ -1,0 +1,30 @@
+<app-loading [loading]="loading"></app-loading>
+<mat-sidenav-container class="sidenav-container fade-in">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>
+      <img [src]="logo" width="40" height="40">
+      <h1 class="color-white ma-auto">
+        {{title}}
+      </h1>
+    </mat-toolbar>
+    <app-nav [navbars]="navbars"></app-nav>
+  </mat-sidenav>
+  <mat-sidenav-content  fxLayout="column">
+    <mat-toolbar class="header-bg">
+      <a class="border-none cursor-pointer mat-icon-custom"  aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon" class="mat-icon-custom" color="accent">{{ drawer.opened ? 'menu_open' : 'menu' }}</mat-icon>
+      </a>
+      <a class="cursor-pointer dashboard">Dashboard</a>
+    </mat-toolbar>
+    <hr>
+    <app-content-top></app-content-top>
+    <div fxFlex class="pt-10 pl-10 pr-10">
+      <router-outlet></router-outlet>
+      <br>
+    </div>
+    <app-footer ></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
