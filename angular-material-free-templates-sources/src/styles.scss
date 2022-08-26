@@ -6,6 +6,11 @@ html, body {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+ // height:100%;
+}
+.hr {
+  color: #d8dbe0;
+  opacity: .25
 }
 .h1, h1 {
   font-size: 3.3125rem;
@@ -228,6 +233,9 @@ a {
 .app-info-bg {
   background: #00bcd4;
 }
+.app-primary-bg {
+  background: $primary;
+}
 
 
 .app-warning-color-1 {
@@ -259,4 +267,11 @@ a {
 }
 .app-info-color {
   color: #00bcd4;
+}
+.app-color-white {
+  color: white;
+}
+
+.vertical-align-md{
+  vertical-align: middle;
 }

@@ -1,9 +1,97 @@
-<p>colors works!</p>
-<p>
-  <mat-form-field appearance="legacy">
-    <mat-label>Legacy form field</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
+<section>
+  <h2>Couleurs</h2>
+  <h5>Admin template is supported by an extensive Material Design color system that themes our styles and components.
+    This enables more comprehensive customization and extension for any project.</h5>
+  <hr class="hr">
+</section>
+<section>
+  <h2>Theme</h2>
+  <h5>We use a subset of all colors to create a smaller color palette for generating color schemes, also available is
+    angular-material-free-templates-sources/src/styles.scsss file.</h5>
+  <hr class="hr">
+</section>
+<br>
+<section>
+  <mat-card>
+    <br>
+    <mat-card-title>Colors view demo</mat-card-title>
+    <mat-card-subtitle>colors</mat-card-subtitle>
+    <div class="content">
+      <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="33%">
+          <mat-card class="app-primary-bg">
+            <mat-card-header>
+              <mat-card-title></mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="app-color-white">
+                $primary
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div fxFlex="33.33%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let element of dataSource">
+          <mat-card [ngClass]="element.header">
+            <mat-card-header>
+              <mat-card-title></mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="app-color-white">
+                {{element.value}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <hr class="hr">
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <span class="btn-code">SCSS</span>
+            </mat-panel-title>
+            <mat-panel-description>
+              <span class="btn-code">
+                  <mat-icon class="vertical-align-md">code</mat-icon>
+                  Show code
+              </span>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <hr class="hr">
+          <div class="bloc-code">
+            <pre>
+                <code [innerHTML]="codeSCSS"></code>
+             </pre>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <br>
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <span class="btn-code">HTML</span>
+            </mat-panel-title>
+            <mat-panel-description>
+              <span class="btn-code">
+                  <mat-icon class="vertical-align-md">code</mat-icon>
+                  Show code
+              </span>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <hr class="hr">
+          <div class="bloc-code">
+            <span *ngFor="let element of dataSourceHtml">
+               <br>
+                <code class="pd-10">{{element.header}}</code>
+               <br>
+             </span>
+            <br>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </mat-card>
+</section>
+
+

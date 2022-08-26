@@ -26,7 +26,6 @@
 }
 .mat-expansion-panel-header {
   background: rgba(0, 0, 0, 0.125);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .mat-expansion-panel-header:hover {
@@ -37,6 +36,7 @@
 }
 .active {
   background: rgba(255, 255, 255, 0.3);
+  border-right: 3px solid #2EF0AE;
 }
 
 .app-icon {
@@ -46,4 +46,7 @@
 
 .app-icon-actived {
   color: #2EF0AE;
+}
+.mat-accordion .mat-expansion-panel:last-of-type {
+  border-top: 3px solid transparent;
 }

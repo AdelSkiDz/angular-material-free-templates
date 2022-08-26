@@ -2,10 +2,17 @@
 
 @include mat-core();
 
+$app-warning : linear-gradient(60deg,#ffa726,#fb8c00);
+$app-success  : linear-gradient(60deg,#66bb6a,#43a047);
+$app-danger : linear-gradient(60deg,#ef5350,#e53935);
+$app-optional : linear-gradient(60deg,#ab47bc,#8e24aa);
+$app-default : #999;
+$app-info : #00bcd4;
+
 
 :root {
   --primary:#3c4b64; // #009787;
-  --accent: #00bcd4 //#3c4b64;//#017d8f;
+  --accent: #2EF0AE; //#3c4b64;//#017d8f;
 }
 $primary : var(--primary);
 $accent : var(--accent);

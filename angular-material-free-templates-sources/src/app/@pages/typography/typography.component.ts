@@ -30,7 +30,7 @@ export class TypographyComponent extends ContentTopValueComponent {
 
 export interface PeriodicElement {
   header: string;
-  value: string;
+  value?: string;
   name?: string;
 }
 
