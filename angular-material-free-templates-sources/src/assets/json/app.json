@@ -9,6 +9,12 @@
         "active": true
       },
       {
+        "path": "profile",
+        "title": "User Profile",
+        "icon": "supervised_user_circle",
+        "active": true
+      },
+      {
         "path": "typography",
         "title": "Typography",
         "icon": "library_books",
