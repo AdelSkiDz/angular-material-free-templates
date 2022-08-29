@@ -7,6 +7,7 @@ export declare const enum Route {
   Colors = 'colors',
   Typography = 'typography',
   Icons = 'icons',
+  UserProfile = 'profile',
 }
 
 const routes: Routes = [
@@ -33,6 +34,11 @@ const routes: Routes = [
         path: `${Route.Icons}`,
         loadChildren: () => import('../@pages/icons/icons.module')
           .then(icon => icon.IconsModule),
+      },
+      {
+        path: `${Route.UserProfile}`,
+        loadChildren: () => import('../@pages/user-profile/user-profile.module')
+          .then(user => user.UserProfileModule),
       }
     ]
   }
