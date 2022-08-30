@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UntypedFormBuilder, UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-user-profile',
@@ -6,10 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
+  formGroup: UntypedFormGroup | undefined;
+  constructor(private _formBuilder: UntypedFormBuilder,) {
+    this._init();
+  }
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  private _init(): void {
+    this.formGroup = this._initFormGroup();
+  }
+
+  private _initFormGroup(): UntypedFormGroup {
+    this.formGroup = this._formBuilder.group({
+      entite: ['', []],
+      referenceUUID: ['', []],
+      referenceLCL: ['', []],
+      referenceMessage: ['', []],
+      statut: ['', []],
+      dateDebutReception: [''],
+      dateFinReception: [''],
+    });
+    this.formGroup.reset();
+    return this.formGroup;
   }
 
 }
