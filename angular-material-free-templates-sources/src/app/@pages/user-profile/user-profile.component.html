@@ -1,73 +1,94 @@
-  <mat-card>
-    <br>
-    <mat-card-title>Profile</mat-card-title>
-    <mat-card-subtitle>Edit Profile</mat-card-subtitle>
-    <div class="content">
-      <div fxLayout="row wrap" fxLayoutGap="16px grid">
-        <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="33%">
-          <form *ngIf="formGroup" [formGroup]="formGroup">
-            <div>
-              <mat-form-field class="font-size-10 with-250" appearance="outline">
-                <mat-label>Entité</mat-label>
-                <input type="text" matInput formControlName="entite">
-              </mat-form-field>
+<div fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="66.66%" fxFlex.xs="100%" fxFlex.sm="33%" class="content">
+    <mat-card>
+      <br>
+      <mat-card-title>Profile</mat-card-title>
+      <mat-card-subtitle>Edit Profile</mat-card-subtitle>
+          <div>
+            <form *ngIf="formGroup" [formGroup]="formGroup">
+              <div fxLayout="row wrap" fxLayoutGap="10px">
+                <mat-form-field fxFlex="30%" class="font-size-10" appearance="outline">
+                  <mat-label>COMPANY</mat-label>
+                  <input type="text" matInput formControlName="company">
+                </mat-form-field>
 
-              <mat-form-field class="font-size-10 with-250" appearance="outline">
-                <mat-label>Référence uuid</mat-label>
-                <input type="text" matInput formControlName="referenceUUID" uuidFormatter>
-              </mat-form-field>
+                <mat-form-field fxFlex="30%" class="font-size-10" appearance="outline">
+                  <mat-label>USERNAME</mat-label>
+                  <input type="text" matInput formControlName="username" uuidFormatter>
+                </mat-form-field>
 
-              <mat-form-field class="font-size-10 with-250" appearance="outline">
-                <mat-label>La référence LCL</mat-label>
-                <input type="text" matInput formControlName="referenceLCL">
-              </mat-form-field>
-            </div>
-            <div>
-              <mat-form-field class="font-size-10 with-250" appearance="outline">
-                <mat-label>La date de réception</mat-label>
-                <mat-date-range-input [rangePicker]="rangePicker" name="dateReceptionInterval">
-                  <input matStartDate formControlName="dateDebutReception" placeholder="Du">
-                  <input matEndDate formControlName="dateFinReception" placeholder="Au">
-                </mat-date-range-input>
-                <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
-                <mat-date-range-picker #rangePicker>
-                  <mat-date-range-picker-actions>
-                    <button mat-raised-button color="primary" matDateRangePickerApply>Appliquer</button>
-                  </mat-date-range-picker-actions>
-                </mat-date-range-picker>
-              </mat-form-field>
-              <mat-form-field class="font-size-10 with-250" appearance="outline">
-                <mat-label>Heure début de réception (HH:mm)</mat-label>
-                <input type="text" matInput name="heureDebut" formControlName="heureDebut">
-              </mat-form-field>
-              <mat-form-field class="font-size-10 with-250" appearance="outline">
-                <mat-label>Heure fin de réception (HH:mm)</mat-label>
-                <input type="text" matInput name="heureFin" formControlName="heureFin">
-              </mat-form-field>
-            </div>
-            <div>
-              <mat-form-field class="font-size-10 with-250" appearance="outline">
-                <mat-label>La référence du message</mat-label>
-                <input type="text" matInput formControlName="referenceMessage">
-              </mat-form-field>
+                <mat-form-field fxFlex="30%" class="font-size-10" appearance="outline">
+                  <mat-label>EMAIL ADDRESS</mat-label>
+                  <input type="text" matInput formControlName="email">
+                </mat-form-field>
+              </div>
+              <div fxLayout="row wrap" fxLayoutGap="10px">
+                <mat-form-field fxFlex="46%" class="font-size-10" appearance="outline">
+                  <mat-label>FIRST NAME</mat-label>
+                  <input type="text" matInput formControlName="firstname">
+                </mat-form-field>
 
-              <mat-form-field class="font-size-10 with-250" appearance="outline">
-                <mat-label>Statut</mat-label>
-                <mat-select formControlName="statut" id="statusSelect">
-                  <mat-option [value]="null"> -</mat-option>
-                  <mat-option [value]="null"> Mr</mat-option>
-                  <mat-option [value]="null"> Mme</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <!--app-ip-button
-              [formGroup]="formGroup"
-              (submitForm)="submitForm();"
-              [libelleButton]="'Rechercher'"
-              [classCss]="'font-size-12'">
-            </app-ip-button-->
-          </form>
-        </div>
+                <mat-form-field fxFlex="45%" class="font-size-10" appearance="outline">
+                  <mat-label>LAST NAME</mat-label>
+                  <input type="text" matInput formControlName="lastname" uuidFormatter>
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field class="font-size-10 with-250" appearance="outline">
+                  <mat-label>La date de réception</mat-label>
+                  <mat-date-range-input [rangePicker]="rangePicker" name="dateReceptionInterval">
+                    <input matStartDate formControlName="dateDebutReception" placeholder="Du">
+                    <input matEndDate formControlName="dateFinReception" placeholder="Au">
+                  </mat-date-range-input>
+                  <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+                  <mat-date-range-picker #rangePicker>
+                    <mat-date-range-picker-actions>
+                      <button mat-raised-button color="primary" matDateRangePickerApply>Appliquer</button>
+                    </mat-date-range-picker-actions>
+                  </mat-date-range-picker>
+                </mat-form-field>
+                <mat-form-field class="font-size-10 with-250" appearance="outline">
+                  <mat-label>Heure début de réception (HH:mm)</mat-label>
+                  <input type="text" matInput name="heureDebut" formControlName="heureDebut">
+                </mat-form-field>
+                <mat-form-field class="font-size-10 with-250" appearance="outline">
+                  <mat-label>Heure fin de réception (HH:mm)</mat-label>
+                  <input type="text" matInput name="heureFin" formControlName="heureFin">
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field class="font-size-10 with-250" appearance="outline">
+                  <mat-label>La référence du message</mat-label>
+                  <input type="text" matInput formControlName="referenceMessage">
+                </mat-form-field>
+
+                <mat-form-field class="font-size-10 with-250" appearance="outline">
+                  <mat-label>Statut</mat-label>
+                  <mat-select formControlName="statut" id="statusSelect">
+                    <mat-option [value]="null"> -</mat-option>
+                    <mat-option [value]="null"> Mr</mat-option>
+                    <mat-option [value]="null"> Mme</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <app-button
+                [formGroup]="formGroup"
+                [libelleButton]="'Rechercher'"
+                [classCss]="'font-size-12'">
+              </app-button>
+            </form>
+          </div>
+    </mat-card>
+  </div>
+  <div fxFlex="33.33%" fxFlex.xs="100%" fxFlex.sm="33%" class="content">
+    <mat-card>
+      <br>
+      <mat-card-title>Profile</mat-card-title>
+      <mat-card-subtitle>Edit Profile</mat-card-subtitle>
+      <div>
+
       </div>
-    </div>
-  </mat-card>
+    </mat-card>
+  </div>
+
+</div>

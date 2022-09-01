@@ -14,6 +14,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   imports: MaterialModule.MATERIAL_MODULE_LIST,
@@ -35,6 +36,7 @@ export class MaterialModule {
     MatProgressBarModule,
     MatExpansionModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonModule
   ];
 }
