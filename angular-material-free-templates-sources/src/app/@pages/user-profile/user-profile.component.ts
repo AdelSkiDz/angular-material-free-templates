@@ -20,10 +20,11 @@ export class UserProfileComponent implements OnInit {
 
   private _initFormGroup(): UntypedFormGroup {
     this.formGroup = this._formBuilder.group({
-      entite: ['', []],
-      referenceUUID: ['', []],
-      referenceLCL: ['', []],
-      referenceMessage: ['', []],
+      company: ['', []],
+      username: ['', []],
+      email: ['', []],
+      firstname: ['', []],
+      lastname: ['', []],
       statut: ['', []],
       dateDebutReception: [''],
       dateFinReception: [''],

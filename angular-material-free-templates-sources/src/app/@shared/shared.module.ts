@@ -5,6 +5,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {LoadingComponent} from "./components/loading/loading.component";
 import {MaterialModule} from "./material/material.module";
+import {ButtonComponent} from "./components/button/button.component";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {MaterialModule} from "./material/material.module";
 export class SharedModule {
 
   static readonly SHARED_COMPONENTS = [
-    LoadingComponent
+    LoadingComponent,
+    ButtonComponent
   ];
   static readonly SHARED_DIRECTIVES = [
 
