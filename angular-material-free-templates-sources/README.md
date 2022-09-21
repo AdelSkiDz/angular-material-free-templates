@@ -126,3 +126,5 @@ material-dashboard-angular
 ```
 Browser Support
 At present, we officially aim to support the last two versions of the following browsers:
+
+![Alt text](../angular-material-free-templates-sources/src/assets/images/img.png?raw=true "Title")
